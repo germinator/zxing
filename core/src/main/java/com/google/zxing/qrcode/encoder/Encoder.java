@@ -108,7 +108,7 @@ public final class Encoder {
 
     Version version = null;
     if ((hints != null) && hints.containsKey(EncodeHintType.QR_VERSION)) {
-      Version requestedVersion = Version.getVersionForNumber((int) hints.get(EncodeHintType.QR_VERSION));
+      Version requestedVersion = Version.getVersionForNumber((Integer) hints.get(EncodeHintType.QR_VERSION));
       int bitsNeeded = calculateBitsNeeded(mode, headerBits, dataBits, requestedVersion);
       if (willFit(bitsNeeded, requestedVersion, ecLevel)) {
         version = requestedVersion;
