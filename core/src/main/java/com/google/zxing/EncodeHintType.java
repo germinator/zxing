@@ -91,4 +91,10 @@ public enum EncodeHintType {
    *   a positive number (1, 2, .. 32) specifies a normaol (non-compact) Aztec code
    */
    AZTEC_LAYERS,
+   
+   /**
+    * Specifies the exact version of QR code to be encoded. An integer. If the data specified
+    * cannot fit within the required version, a WriterException will be thrown.
+    */
+   QR_VERSION
 }
