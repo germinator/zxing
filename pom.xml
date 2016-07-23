@@ -19,7 +19,7 @@
 
   <groupId>com.google.zxing</groupId>
   <artifactId>zxing-parent</artifactId>
-  <version>3.2.1</version>
+  <version>3.2.1-jmk</version>
   <packaging>pom</packaging>
 
   <dependencyManagement>
