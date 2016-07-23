@@ -158,6 +158,10 @@ public final class Encoder {
     return qrCode;
   }
 
+  /**
+   * Decides the smallest version of QR code that will contain all of the provided data.
+   * @throws WriterException if the data cannot fit in any version
+   */
   private static Version recommendVersion(ErrorCorrectionLevel ecLevel,
 		  								  Mode mode,
 		  								  BitArray headerBits,
@@ -278,6 +282,10 @@ public final class Encoder {
     throw new WriterException("Data too big");
   }
   
+  /**
+   * @return true if the number of input bits will fit in a code with the specified version and
+   * error correction level.
+   */
   private static boolean willFit(int numInputBits, Version version, ErrorCorrectionLevel ecLevel) {
 	    // In the following comments, we use numbers of Version 7-H.
       // numBytes = 196
